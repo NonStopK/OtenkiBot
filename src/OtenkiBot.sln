@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtenkiBotCoreTest", "OtenkiBotCoreTest\OtenkiBotCoreTest.csproj", "{3F526E0A-2A02-4389-B1E8-514EA4657B50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtenkiBotCore", "OtenkiBotCore\OtenkiBotCore.csproj", "{EA39A4FE-992B-49D7-A367-846A334CB02B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtenkiBotConsole", "OtenkiBotConsole\OtenkiBotConsole.csproj", "{0A8F275A-1481-4382-A459-0ADF93B9430C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F526E0A-2A02-4389-B1E8-514EA4657B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F526E0A-2A02-4389-B1E8-514EA4657B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F526E0A-2A02-4389-B1E8-514EA4657B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA39A4FE-992B-49D7-A367-846A334CB02B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA39A4FE-992B-49D7-A367-846A334CB02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA39A4FE-992B-49D7-A367-846A334CB02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA39A4FE-992B-49D7-A367-846A334CB02B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A8F275A-1481-4382-A459-0ADF93B9430C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A8F275A-1481-4382-A459-0ADF93B9430C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A8F275A-1481-4382-A459-0ADF93B9430C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A8F275A-1481-4382-A459-0ADF93B9430C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

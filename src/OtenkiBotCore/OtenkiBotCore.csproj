@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EA39A4FE-992B-49D7-A367-846A334CB02B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OtenkiBotCore</RootNamespace>
+    <AssemblyName>OtenkiBotCore</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CoreTweet, Version=0.5.3.40351, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CoreTweet.0.5.3\lib\net45\CoreTweet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CoreTweet.Streaming.Reactive, Version=0.5.3.40352, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CoreTweet.Streaming.Reactive.0.5.3\lib\net40\CoreTweet.Streaming.Reactive.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Linq.2.2.5\lib\net45\System.Reactive.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Auth\IOAuth.cs" />
+    <Compile Include="Auth\OAuth.cs" />
+    <Compile Include="Entity\CityMst.cs" />
+    <Compile Include="Entity\ForecastAreaRelationships.cs" />
+    <Compile Include="Entity\EndOfWordsMst.cs" />
+    <Compile Include="Entity\MentionKeywordMst.cs" />
+    <Compile Include="Entity\MentionMst.cs" />
+    <Compile Include="Entity\MentionSubTypeMst.cs" />
+    <Compile Include="Entity\SendingLog.cs" />
+    <Compile Include="Entity\ForecastDayMst.cs" />
+    <Compile Include="Entity\OtenkiBotDbContext.cs" />
+    <Compile Include="Entity\PrefectureMst.cs" />
+    <Compile Include="Entity\ReceivingLog.cs" />
+    <Compile Include="Entity\MentionTypeMst.cs" />
+    <Compile Include="Forecast\Livedoor\ILivedoorJsonParser.cs" />
+    <Compile Include="Forecast\Livedoor\ILivedoorRequestor.cs" />
+    <Compile Include="Forecast\Livedoor\LivedoorForecasts.cs" />
+    <Compile Include="Forecast\Livedoor\LivedoorJsonParser.cs" />
+    <Compile Include="Forecast\Livedoor\LivedoorRequestor.cs" />
+    <Compile Include="Forecast\Yahoo\CustomForecast.cs" />
+    <Compile Include="Forecast\Yahoo\CustomForecastCreator.cs" />
+    <Compile Include="Forecast\Yahoo\ICustomForecastCreator.cs" />
+    <Compile Include="Forecast\Yahoo\IYahooRequestor.cs" />
+    <Compile Include="Forecast\Yahoo\IYahooXmlParser.cs" />
+    <Compile Include="Forecast\Yahoo\YahooForecast.cs" />
+    <Compile Include="Forecast\Yahoo\YahooRequestor.cs" />
+    <Compile Include="Forecast\Yahoo\YahooXmlParser.cs" />
+    <Compile Include="Logic\MentionKeywordMstLogic.cs" />
+    <Compile Include="Logic\MentionSubTypeMstLogic.cs" />
+    <Compile Include="Logic\MentionMstLogic.cs" />
+    <Compile Include="Logic\EndOfWordsMstLogic.cs" />
+    <Compile Include="Logic\SendingLogLogic.cs" />
+    <Compile Include="Logic\ReceivingLogLogic.cs" />
+    <Compile Include="Logic\ForecastDayLogic.cs" />
+    <Compile Include="Logic\WeatherForecastLogic.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TweetController\IReplyCreator.cs" />
+    <Compile Include="TweetController\IPostController.cs" />
+    <Compile Include="TweetController\IMainController.cs" />
+    <Compile Include="TweetController\AbstractReplyController.cs" />
+    <Compile Include="TweetController\IStarter.cs" />
+    <Compile Include="TweetController\MainController.cs" />
+    <Compile Include="TweetController\PostController.cs" />
+    <Compile Include="TweetController\ForecastReplyCreator.cs" />
+    <Compile Include="TweetController\ReplyCreatorFactory.cs" />
+    <Compile Include="TweetController\ReplyController.cs" />
+    <Compile Include="TweetController\MeaninglessReplyCreator.cs" />
+    <Compile Include="TweetController\Starter.cs" />
+    <Compile Include="TweetController\Tweet.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
